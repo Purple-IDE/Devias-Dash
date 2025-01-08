@@ -60,13 +60,17 @@ export default function NextAppDirEmotionCacheProvider(props: NextAppDirEmotionC
       const style = registry.cache.inserted[name];
 
       if (typeof style !== 'boolean') {
-        if (isGlobal) {
-          globals.push({ name, style });
+        if (typeof style === 'string') {
+          if (isGlobal) {
+            globals.push({ name, style });
+          } else {
+            styles += style;
+            dataEmotionAttribute += ` ${name}`;
+          }
         } else {
-          styles += style;
-          dataEmotionAttribute += ` ${name}`;
+          console.warn(`Unexpected style value: ${style}`);
         }
-      }
+      }      
     });
 
     return (
