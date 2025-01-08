@@ -117,7 +117,14 @@ import dayjs from 'dayjs';
   ];
 
   export default function Page(): React.JSX.Element {
-    const [page, _setPage] = useState(0);
+    const [page, setPage] = useState(0);
+
+const handleNextPage = () => {
+  setPage((prevPage) => prevPage + 1);
+};
+
+console.log(page); // Use the `page` value
+
     const rowsPerPage = 5;
 
   const paginatedCustomers = applyPagination(customers, page, rowsPerPage);
