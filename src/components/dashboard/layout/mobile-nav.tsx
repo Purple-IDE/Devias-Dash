@@ -33,11 +33,12 @@ export function MobileNav({ open, onClose }: MobileNavProps): React.JSX.Element 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const openDropdown = Boolean(anchorEl);
   
-  const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
+  const handleClick = (event: React.MouseEvent<HTMLDivElement>): void => {
     setAnchorEl(event.currentTarget);
   };
   
-  const handleClose = () => {
+  
+  const handleClose = (): void => {
     setAnchorEl(null);
   };
 

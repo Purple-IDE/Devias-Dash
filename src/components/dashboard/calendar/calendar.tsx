@@ -11,9 +11,10 @@ import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 export function Calendar(): React.JSX.Element {
   const [selectedDate, setSelectedDate] = React.useState<Date | null>(new Date());
 
-  const handleDateChange = (newDate: Date | null) => {
+  const handleDateChange: (newDate: Date | null) => void = (newDate: Date | null) => {
     setSelectedDate(newDate);
   };
+  
 
   return (
     <Card>

@@ -33,7 +33,7 @@ const notifications = [
 export function NotificationsList(): React.JSX.Element {
   const [items, setItems] = React.useState(notifications);
 
-  const handleDismiss = (id: number) => {
+  const handleDismiss = (id: number): void => {
     setItems(items.filter(item => item.id !== id));
   };
 
@@ -51,9 +51,9 @@ export function NotificationsList(): React.JSX.Element {
             secondary={`${notification.description} • ${notification.time}`}
           />
           <ListItemSecondaryAction>
-            <IconButton edge="end" onClick={() => handleDismiss(notification.id)}>
+            <IconButton edge="end" onClick={() => { handleDismiss(notification.id); }} />
+
               <XIcon />
-            </IconButton>
           </ListItemSecondaryAction>
         </ListItem>
       ))}
