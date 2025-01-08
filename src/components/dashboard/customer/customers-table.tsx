@@ -33,11 +33,10 @@ export interface Customer {
 }
 
 interface CustomersTableProps {
-  count: number;
-  page: number;
-  onPageChange: (page: number) => void;
-  rows: Customer[];
-  rowsPerPage: number;
+  count?: number;
+  page?: number;
+  rows?: Customer[];
+  rowsPerPage?: number;
 }
 
 export function CustomersTable({

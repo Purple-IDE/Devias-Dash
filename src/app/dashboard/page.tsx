@@ -166,9 +166,8 @@ export default function Page(): React.JSX.Element {
         <Card sx={{ width: '100%' }}>
           <CustomersFilters />
           <CustomersTable
-            count={customers.length}
+            count={paginatedCustomers.length}
             page={page}
-            onPageChange={setPage}
             rows={paginatedCustomers}
             rowsPerPage={rowsPerPage}
           />
