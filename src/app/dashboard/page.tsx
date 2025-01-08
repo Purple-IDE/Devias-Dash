@@ -19,9 +19,7 @@ import type { Customer } from '@/components/dashboard/customer/customers-table';
 import { applyPagination } from '@/utils/apply-pagination';
 import dayjs from 'dayjs';
 
-export default function Page(): React.JSX.Element {
-  const [page] = useState(0);
-  const rowsPerPage = 5;
+
 
   const customers: Customer[] = [
     {
@@ -117,6 +115,10 @@ export default function Page(): React.JSX.Element {
     },
     // Add more customer data as needed
   ];
+
+  export default function Page(): React.JSX.Element {
+    const [page, setPage] = useState(0);
+    const rowsPerPage = 5;
 
   const paginatedCustomers = applyPagination(customers, page, rowsPerPage);
 

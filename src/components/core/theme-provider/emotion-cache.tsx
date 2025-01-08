@@ -68,7 +68,9 @@ export default function NextAppDirEmotionCacheProvider(props: NextAppDirEmotionC
             dataEmotionAttribute += ` ${name}`;
           }
         } else {
+          // eslint-disable-next-line no-console
           console.warn(`Unexpected style value: ${style}`);
+
         }
       }      
     });
