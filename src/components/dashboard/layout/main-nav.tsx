@@ -17,12 +17,6 @@ export function MainNav(): React.JSX.Element {
 
   const userPopover = usePopover<HTMLDivElement>();
 
-  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(event.target.value);
-    // You can implement search logic here
-    console.log('Searching for:', event.target.value);
-  };
-
   return (
     <React.Fragment>
       <Box
