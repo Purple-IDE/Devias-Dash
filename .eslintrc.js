@@ -23,6 +23,7 @@ module.exports = {
   },
   rules: {
     '@typescript-eslint/no-unused-vars': [
+      
       'error',
       {
         ignoreRestSiblings: true,
@@ -63,6 +64,10 @@ module.exports = {
     '@typescript-eslint/no-unnecessary-condition': 'off', // remove when no static data is used
     '@typescript-eslint/require-await': 'off', // Server Actions require async flag always
     '@typescript-eslint/prefer-nullish-coalescing': 'off', // personal style
+    // Disable specific ESLint rules
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-confusing-void-expression": "off",
+    "react/display-name": "off",
     '@typescript-eslint/restrict-template-expressions': [
       'error',
       {
