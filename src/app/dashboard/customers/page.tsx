@@ -110,7 +110,7 @@ const customers = [
 ] satisfies Customer[];
 
 export default function Page(): React.JSX.Element {
-  const [page, setPage] = React.useState(0);
+  const page = 0;
   const rowsPerPage = 5;
 
   const paginatedCustomers = applyPagination(customers, page, rowsPerPage);
@@ -139,7 +139,6 @@ export default function Page(): React.JSX.Element {
       <CustomersTable
         count={paginatedCustomers.length}
         page={page}
-        onPageChange={setPage}
         rows={paginatedCustomers}
         rowsPerPage={rowsPerPage}
       />
